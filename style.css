@@ -6,24 +6,29 @@
 html,
 body {
     width: 100%;
-    height: 100%;
-    background-color: lightslategrey;
+    /* height: 100%; */
+    /* background-color: lightyellow; */
+    background-color: greenyellow;
 }
-
 main {
-    width: 100%;
-    max-width: 1200px;
+    background-color: lightyellow;
+}
+.main-container,
+footer {
+    width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
+    /* padding: 0 2rem; //instead of this you can adjust the width to use 90% of the space available */ 
+    font-family: 'Roboto', sans-serif;  
+}
+.main-container {
     
+    padding-bottom: 50px;
+    /* height: 85%; */
 }
 
-header,
-section,
 footer {
-    /* padding: 2rem; */
-    /* margin: .3rem; */
-    border: 1px solid beige;
-    /* background-color: #eaeaea; */
+    /* height: 15%; */
 }
 
 /* HEADER SECTION*/
@@ -36,22 +41,200 @@ header img {
 /* CTA SECTION */
 .cta {
     display: flex;
+    position: relative;
+    /* background-image: url('/images/bg-image/scooter.svg');
+    background-repeat: no-repeat;
+    background-position-x: center; */
+    
+}
+.cta img {
+    position: absolute;
+    left: 20%;
+    max-width: 500px;
+}
+.cta-form,
+.cta-text {
+    z-index: 10;
+}
+
+
+
+.cta-text {
+    max-width: 25rem;
+}
+
+.cta-text h1 {
+    font-size: 4rem;
+    margin: 1rem 0;
 }
 
 .cta-form {
-    background-color: lightgreen;
+    background-color: white;
     padding: 1.5rem;
-    margin: 0 auto;
+    margin-left: auto;
     border-radius: 1rem;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    height: fit-content;
+    min-width: 23rem;
 }
 
-.cta-form input {
+.cta-form h2 {
+    font-size: 2rem;
+    margin: 0 auto;
+}
+p {
+    margin: 0 auto;
+}
+
+.cta-form input,
+footer input {
     border-radius: .3rem;
     padding: .5rem;
-    margin: .2rem 0;
+    margin: .2rem .2rem .2rem 0;
     border: none;
-    background-color: lightsteelblue;
+    background-color: lightcyan;
+    width: 100%;
 }
+
+button {
+    background-color: lightgreen;
+    border: none;
+    border-radius: .5rem;
+    width: 100%;
+    height: 2rem;
+
+    font-size: x-large;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: 'Bangers', cursive;
+    color: goldenrod;
+}
+
+#terms {
+    width: auto;
+}
+
+.small-txt {
+    font-size: small;
+}
+
+.xsmall-txt {
+    font-size: x-small;
+}
+
+/* FOOTER SECTION */
+footer {
+    
+    display: flex;
+    height: 100%;
+    margin-top: 20px;
+}
+
+footer form {
+    display: flex;
+}
+
+footer h5 {
+    margin: .5rem 0;
+}
+
+footer form button {
+    margin: .2rem;
+    /* height: auto; */
+}
+
+#inputHoursXweek {
+    width: 100px;
+}
+
+#ctaWeekHourCount {
+    align-self: center;
+}
+
+footer .social {
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social i {
+    margin:0 .5rem;
+}
+
+/* TABLET VIEW */
+@media screen and (max-width: 800px ) {
+    .cta {
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .cta img {
+        position: relative;
+        left: 0%;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+    
+    header,
+    .cta-text, 
+    .cta-form {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer .social {
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .social i {
+        margin:0 1rem;
+        font-size: x-large;
+    }
+
+    #inputCity {
+        max-width: 200px;
+    }
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 500px) {
+    #ctaWeekHourCount form{
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    #ctaWeekHourCount {
+        text-align: center;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+    }
+
+    #ctaWeekHourCount button {
+        max-width: 300px;
+    }
+
+    .social i {
+        margin:0 .5rem;
+        font-size: large;
+    }
+    /* #inputCity {
+        
+    } */
+}
+
+
+
+
+
+
 
 
 
